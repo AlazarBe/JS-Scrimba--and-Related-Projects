@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BasketBall score board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>BasketBall Score Board</h1>
+    <div class="score-board" >
+      <div class="home-board " id="home-board">
+        <h2>Home</h2>
+        <h3 id="home-score">score:0</h3>
+
+        <button onclick="add1Home()">+1 Point</button>
+        <button onclick="add2Home()">+2 Points</button>
+        <button onclick="add3Home()">+3 Points</button>
+      </div>
+      <div class="guest-board" id="guest-board">
+        <h2>Guest</h2>
+        <h3 id="guest-score">score:0</h3>
+
+        <button  onclick="add1Guest()">+1 Point</button>
+        <button  onclick="add2Guest()">+2 Points</button>
+        <button  onclick="add3Guest()">+3 Points</button>
+      </div>
+      
+    </div>
+    <button id="reset-btn" onclick="resetScores()">Reset Game</button>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
