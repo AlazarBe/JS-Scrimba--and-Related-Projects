@@ -1,65 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  
   background-image: url(jason-leung-nM2WEy42Npg-unsplash.jpg);
   background-size: cover;
-  height: 100vh;
-  text-align : center;
+  background-position: center;
+  min-height: 100vh;
+  text-align: center;
   color: white;
 }
-h1{
+
+/* Title */
+h1 {
   background-color: orange;
   margin: 0;
-  padding: 20px;
-  font-size: 50px;
+  padding: 15px;
+  font-size: clamp(28px, 5vw, 50px);
   font-weight: bold;
 }
+
+/* Main board */
 .score-board {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  padding: 30px;
- 
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 20px;
+  flex-wrap: wrap; /* allows stacking on small screens */
 }
-.home-board{
-  
- margin-right: 100px; 
 
- padding: 20px;
- border-radius: 20px;
- background-color: rgb(127, 255, 185);
- color: black;
+/* Boards */
+.home-board,
+.guest-board {
+  width: 280px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(127, 255, 185);
+  color: black;
 }
-.guest-board{
- margin-left: 100px; 
 
- padding: 20px;
- border-radius: 20px;
- background-color: rgb(127, 255, 185);
- color: black;
-}
-h2{
-  font-size: 40px;
+/* Headings */
+h2 {
+  font-size: clamp(24px, 4vw, 40px);
   margin: 10px 0;
 }
-#home-score, #guest-score{
-  font-size: 25px;
+
+/* Scores */
+#home-score,
+#guest-score {
+  font-size: clamp(18px, 3vw, 25px);
   background-color: rgb(127, 255, 185);
   padding: 10px;
-  border: none;
   border-radius: 10px;
   text-decoration: underline;
   color: red;
   margin: 20px 0;
 }
 
+/* Buttons */
 .home-board button,
-.guest-board button{
-  font-size: 20px;
-  margin: 10px;
-  padding: 10px 20px;
+.guest-board button {
+  width: 100%;
+  font-size: clamp(16px, 3vw, 20px);
+  margin: 8px 0;
+  padding: 10px;
   border: none;
   border-radius: 10px;
   background-color: orange;
@@ -67,34 +77,33 @@ h2{
   font-weight: bold;
   cursor: pointer;
 }
+
 .home-board button:hover,
-.guest-board button:hover{
+.guest-board button:hover {
   background-color: darkorange;
-  box-shadow: 3px 3px 5px rgba(255, 166, 0, 0.794)
+  box-shadow: 3px 3px 5px rgba(255, 166, 0, 0.7);
 }
-#reset-btn{
-  font-size: 30px;
+
+/* Reset */
+#reset-btn {
+  font-size: clamp(20px, 4vw, 30px);
   font-weight: bold;
-  margin: 30px;
-  padding: 15px 30px;
+  margin: 20px;
+  padding: 12px 25px;
   background-color: red;
   color: white;
   border: none;
   border-radius: 15px;
 }
-#reset-btn:hover{
+
+#reset-btn:hover {
   background-color: darkred;
 }
-#end-btn{
-  font-size: 30px;
-  font-weight: bold;
-  margin: 30px;
-  padding: 15px 30px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 15px;
-}
-#end-btn:hover{
-  background-color: darkgreen;
+
+/* -------- MOBILE FIX -------- */
+@media (max-width: 600px) {
+  .score-board {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
