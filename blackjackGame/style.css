@@ -29,7 +29,12 @@ button{
   border: none;
   padding: 10px 20px;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 20px 20px;
   border-radius: 15px;
   cursor: pointer;
+}
+#reset-game{
+  background-color: red;
+  color: white;
+  font-weight: bold;
 }

@@ -63,5 +63,12 @@ function renderGame() {
     isAlive = false;
   }
 }
-
-messageEl.textContent = "Click 🔝 to begin.";
+function resetGame() {
+  cards = [];
+  sum = 0;
+  hasBlackJack = false;
+  isAlive = false;
+  renderGame();
+}
+// Initial message
+messageEl.textContent = "Click Start Game to begin.";
